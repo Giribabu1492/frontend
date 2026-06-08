@@ -4,7 +4,7 @@ pipeline {
         PROJECT = 'expense'
         COMPONENT = 'frontend'
         appVersion = ''
-        ACC_ID = '894650614410'
+        ACC_Id = '894650614410'
     }
     options {
         disableConcurrentBuilds()
@@ -35,7 +35,7 @@ pipeline {
                     --provenance=false \
                     --sbom=false \
                     -t ${ACC_Id}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${APP_VERSION} .
-                docker push ${ACC_Id}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${APP_VERSION}
+                    docker push ${ACC_Id}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${APP_VERSION}
                     """
                 }
                  
